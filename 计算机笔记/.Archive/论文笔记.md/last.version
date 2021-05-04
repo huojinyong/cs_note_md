@@ -1,0 +1,12 @@
+---
+title: 论文笔记
+date: 2021-05-04 19:40
+---
+- [Distillation as a Defense to Adversarial Perturbations against Deep Neural Networks](#distillation-as-a-defense-to-adversarial-perturbations-against-deep-neural-networks)
+
+# Distillation as a Defense to Adversarial Perturbations against Deep Neural Networks
+
+Distillation原本被用来将一个DNN的knowledge迁移到另一个不同的网络。Distillation可以从大网络迁移到小网络，从而降低了DNN结构的复杂性。我们构建了一个Distillation的变种，来进行对抗防御。我们的目的是使用从DNN提取到的knowledge来提升它自己对对抗样本的鲁棒性。
+
+ 如果对抗性梯度很高，那么制作对抗样本也会变得很容易，因为一个小的扰动就会引起DNN输出的较大的变化。为了防御这样的扰动，我们必须要降低输入的变化而引起的输出的变化。换句话说,**我们要使用Denfensive \: Distillation来平滑模型，使得模型能够在他的训练集之外依旧泛化的很好。**
+
