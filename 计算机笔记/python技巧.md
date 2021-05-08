@@ -5,12 +5,12 @@ date: 2021-05-08 19:22
 date: 2021-05-08 19:22](#title-python技巧-date-2021-05-08-19-22)
 - [~~判断b是不是a的子集（是子集不是真子集）~~](#判断b是不是a的子集（是子集不是真子集）)
 - [Python判断某个列表是否是另一个列表的子列表](#python判断某个列表是否是另一个列表的子列表)
-- [python 如何在一个for循环中遍历两个列表（使用了zip 技术）](#python如何在一个-for循环中遍历两个列表（使用了zip技术）)
+- [python 如何在一个for循环中遍历两个列表（使用了zip 技术）](#python如何在一个for循环中遍历两个列表（使用了zip技术）)
 - [把列表逆序排列](#把列表逆序排列)
 - [深浅拷贝](#深浅拷贝)
   - [浅拷贝](#浅拷贝)
   - [深拷贝](#深拷贝)
-- [【报错】local variable 'animal' referenced before assignment](#【报错】local-variable-animal-referenced-before-assignment)
+- [【报错】local variable 'animal' referenced before assignment](#【报错】localvariable-animal-referenced-before-assignment)
 # ~~判断b是不是a的子集（是子集不是真子集）~~
 ```python
 a = ['1','2','3']
