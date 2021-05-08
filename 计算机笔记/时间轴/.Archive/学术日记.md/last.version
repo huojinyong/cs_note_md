@@ -3,7 +3,7 @@ title: 学术日记
 date: 2021-05-04 20:54
 ---
 
-# 2021-05-04 20:54:51
+# 2021-05-04
 `red:在 Chrome 上安装插件：GitHub with MathJax 可以在自己电脑上的 github 上看到数学公式，公式内加粗命令\pmb{}就可以用了。`
 - 怎么把本地仓库同步到 github 上？
 - 答：
@@ -12,4 +12,47 @@ date: 2021-05-04 20:54
 2. git add “计算机笔记” (表示把文件夹“计算机笔记”放入本地，若使用.这个小点点，则表示把所有东西都放入本地)
 3. git commit  -m “XXX” (放入暂存区)
 4. git push (提交到云端)
+
 我好喜欢 markdown！mac 上 metion 这个软件真的很好用，界面很漂亮！我货比多家，终于选择了它！！！git 的同步我也搞明白了，每次 git 提交前，把 metion 本地文件拷贝覆盖到 git 本地仓库原来的文件夹，然后在执行上面👆的四步即可。啊！真好啊！
+
+# 2021-05-08
+## colab 使用方法
+colab使用方法
+kaggle运行别人的代码的方法
+安装texlive + texstudio
+
+colab使用方法
+https://blog.csdn.net/lumingha/article/details/104825702
+
+## kaggle运行别人的代码的方法
+![](./_image/2021-05-08/截图.png)
+去这里找竞赛题目。
+![](./_image/2021-05-08/截图-2.png)
+在上图位置下载代码，应该是ipynb格式。
+![](./_image/2021-05-08/截图2.png)
+在上图蓝色位置新建笔记本，然后把刚才下载的文件拖进去，点击运行Run All即可。
+之前下载了一个文件运行失败，原因没弄懂，与它涉及其他云盘操作有关。之后下载了一个没和云盘服务器关联的代码，就成功了。
+
+**安装texlive + texstudio**
+https://blog.csdn.net/qq_33749437/article/details/105883479
+~~正在弄，也不知道行不行~~
+成功了
+
+## pycharm里Make available to all projects的含义
+pycharm里，Make available to all projects:勾选上，表示，当在虚拟环境下安装包的时候，copy一份到全局。
+![](./_image/2021-05-08/11image.png)
+## 将google云盘挂在到当前ipynb文件中
+在colab的ipynb里，输入下面两条命令，即可将google云盘挂在到当前ipynb文件中
+from google.colab import drive
+drive.mount('/content/drive')
+
+## 实验室服务器上安装anaconda
+把anaconda文件拖到mobaxterm左侧：
+![](./_image/2021-05-08/22截图.png)
+然后输入命令 bash Anaconda3-2020.11-Linux-x86_64.sh即可安装。好像不用配置环境变量也能运行代码，保险起见先不要配置！
+- anaconda文件在这里👇：
+链接: https://pan.baidu.com/s/19EtNc3vJ7CZ--cXV-5q5Iw  密码: bvji
+
+## torch、torchvision与python对应版本
+![](./_image/2021-05-08/33截图.png)
+ps:千皓说好像25服务器最多支持pytorch到1.1或者1.2,（保险起见还是1.1吧），249服务器最多支持pytorch到1.3或者1.4（1.3应该是可运行的）
