@@ -5,6 +5,7 @@ date: 2021-05-09 09:49
 
 | 英文 | 中文 |
 :--- | :--- 
+for | 针对 xxx
 secure | adj.安全的；vt.保护
 | extract | 摘录，提取 |
 | capture | 捕获 |
@@ -54,6 +55,10 @@ evaluation|评估
 threat|威胁（攻击）
 substitute|代替（代理）
 implement | 使生效，执行
+
+| 句子英文 | 句子中文 |
+:--- | :--- 
+thetarget model for which we want to produce adversarial examples | 我们要针对其生成对抗性示例的目标模型
 
 
 
