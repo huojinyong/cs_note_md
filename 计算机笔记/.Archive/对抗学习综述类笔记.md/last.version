@@ -3,22 +3,6 @@ title: 对抗学习综述类笔记
 date: 2021-05-06 15:15
 ---
 [TOC]
-- [Adversarial Examples Are Not Easily Detected:Bypassing Ten Detection Methods](#adversarial-examples-are-not-easily-detected-bypassing-ten-detection-methods)
-  - [架构](#架构)
-  - [符号定义](#符号定义)
-  - [生成对抗样本](#生成对抗样本)
-  - [实施攻击](#实施攻击)
-    - [自适应的白盒攻击](#自适应的白盒攻击)
-    - [limited-knowledge 的黑盒攻击](#limited-knowledge的黑盒攻击)
-  - [评估防御措施](#评估防御措施)
-    - [第一种检测方法](#第一种检测方法)
-      - [两种防御方法](#两种防御方法)
-        - [1.对抗再训练](#1对抗再训练)
-        - [2.构建二元分类器](#2构建二元分类器)
-      - [zero-knowledge 攻击评估](#zero-knowledge攻击评估)
-      - [perfect-knowledge 攻击评估](#perfect-knowledge攻击评估)
-        - [**攻破 Gong 等的"构建二元分类器"防御方法**](#攻破gong等的构建二元分类器防御方法)
-      - [limited-knowledge 攻击评估](#limited-knowledge攻击评估)
 
 brown:主线
 orange:不懂/存疑
@@ -256,7 +240,12 @@ Li 说他的模型在检测 L-BFGS 算法生成的对抗样本时有 80%真阳�
 
 ### 分布检测   
 通过比较自然图像的分布和对抗样本的分布，**使用经典的统计方法**，以检测对抗样本。共两种方法。   
-#### 最大平均差异   
+#### 最大平均差异(MMD 么么哒方法)      
+Grosse(又是他)假设有一个很强大的攻击模型：给你两个集合，一个集合只包含自然图像，另一个要么包含全部对抗样本，要么包含全部自然图像。请你区分开来。   
+为此，Grosse 使用了么么哒方法（MMD）来检验。在实际使用中由于计算可行性的问题，本文选择了么么哒算法的近似来使用。   
+**结论：**即使 MMD 是最强大的多维统计测试，但它也**无法鉴别**出 C&W 生成的对抗样本。   
+### 内核密度估计（KDE）    
+
 
 
 

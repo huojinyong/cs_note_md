@@ -124,7 +124,7 @@
 <a href="#toc_27">分布检测</a>
 <ul>
 <li>
-<a href="#toc_28">最大平均差异</a>
+<a href="#toc_28">最大平均差异(MMD 么么哒方法)</a>
 </li>
 </ul>
 </li>
@@ -661,7 +661,14 @@
     <span class="md_line md_line_start md_line_end">通过比较自然图像的分布和对抗样本的分布，<strong>使用经典的统计方法</strong>，以检测对抗样本。共两种方法。   </span>
 </p>
 
-<h4 id="toc_28" class="h16"><span class="span_for_h">最大平均差异</span></h4>
+<h4 id="toc_28" class="h16"><span class="span_for_h">最大平均差异(MMD 么么哒方法)</span></h4>
+
+<p class="md_block">
+    <span class="md_line md_line_start">Grosse(又是他)假设有一个很强大的攻击模型：给你两个集合，一个集合只包含自然图像，另一个要么包含全部对抗样本，要么包含全部自然图像。请你区分开来。<br><br /></span>
+    <span class="md_line">为此，Grosse 使用了么么哒方法（MMD）来检验。在实际使用中由于计算可行性的问题，本文选择了么么哒算法的近似来使用。<br><br /></span>
+    <span class="md_line md_line_end"><strong class="md_compiled md_compiled_strong">结论：</strong>即使 MMD 是最强大的多维统计测试，但它也<strong>无法鉴别</strong>出 C&amp;W 生成的对抗样本。</span>
+</p>
+
 <span class="md_repeated_n md_repeated_n_3"></span>
 <p class="md_block last_md_block_in_page">
     <span class="md_line md_line_start md_line_end"><span class="md_line_space_chars md_line_space_chars_1"> </span>🍚⭕️❤️👑⚡️🐓</span>
