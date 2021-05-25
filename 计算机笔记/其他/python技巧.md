@@ -115,4 +115,19 @@ random.shuffle(list_name)
 3、如果还没安装，则安装pyinstaller工具   
  输入：pip install pyinstaller   
  4、生成本项目可执行文件   
- Terminal中输入：pyinstaller -F -w main.py(你自己的 py 名字)   
+ Terminal中输入：pyinstaller -F -w main.py(你自己的 py 名字)     
+
+# python 拷贝文件
+```python
+from shutil import copyfilepaper_word= r'C:\pypost\paper.md'#原文件位置target_word= r'C:\pypost\paper21.txt'#目标文件位置copyfile(paper_word, target_word)#拷贝（可以更改文件类型名）
+```   
+
+# python 文件读取封装后的傻瓜式函数  
+```python
+# coding:utf-8import shutil#把source_file拷贝到target_file里。#注意，可以把aa.md拷贝成bb.txt，格式会自动转换#若被写入文件不存在，则会自动创建;若存在，则会将其覆盖掉def copy_file(source_file,target_file):    shutil.copyfile(source_file, target_file)#清空文件file里的所有内容def qingkong_file(file):    file_obj2 = open(file, 'w')    file_obj2.seek(0)  # 把文件定位到position 0    file_obj2.truncate()  # 清空文件    file_obj2.close()#把字符串the_str写入文件#arg是写入模式的参数，'a'为追加写入，'w'为覆盖写入#若被写入文件不存在，则会自动创建def write_file(file,the_str,arg):    #关键字with在不需要再访问文件后系统自动将其关闭    with open(file,arg, encoding='UTF-8') as file_obj2:  # a为追加写入，w为覆盖写入        file_obj2.write(the_str)#读取并以字符串形式返回文件所有内容def read_file(file):    with open(file,'r', encoding='UTF-8') as file_obj:        contents = file_obj.read()        return contents#逐行读取文件并打印def read_file_by_line(file):    with open(file,'r', encoding='UTF-8') as file_obj:        for line in file_obj:            print(line)
+```  
+删除文件：  
+```python
+import osos.remove("demofile.txt")
+```   
+
