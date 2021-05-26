@@ -130,4 +130,3 @@ from shutil import copyfilepaper_word= r'C:\pypost\paper.md'#原文件位置ta
 ```python
 import osos.remove("demofile.txt")
 ```   
-
