@@ -130,3 +130,18 @@ from shutil import copyfilepaper_word= r'C:\pypost\paper.md'#原文件位置ta
 ```python
 import osos.remove("demofile.txt")
 ```   
+# python 切片操作  
+```python
+取 list 的第 m 到第 n 个元素（包括第 m 和第 n 个元素）：  
+list [ m-1 , n ]
+```   
+```python
+前10个数，每两个取一个：
+list [ :10:2]
+注：0 可以省略
+```
+```python
+后10个数：
+list [-10:]  
+注：负数开头时不用减一  
+```  
